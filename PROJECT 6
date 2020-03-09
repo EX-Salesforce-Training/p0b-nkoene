@@ -1,0 +1,20 @@
+public class POB1 {
+         public static void updateAccountSize( ) {
+             List< Account > ListBox =[SELECT Id, Name, Size__c, NumberOfEmployees FROM account];
+        integer i; integer n;
+             
+             for (i=1; i< n; i++){
+                 
+                 if (ListBox[i].NumberOfEmployees >1 && ListBox[i].NumberOfEmployees <=1000){
+                    listBox[i].Size__c ='Small';
+                        
+                 } else if (ListBox[i].NumberOfEmployees <1 && ListBox[i].NumberOfEmployees <10000){
+             		 listBox[i].Size__c= 'Medium';
+                        
+             }else if(ListBox[i].NumberOfEmployees >10000){
+                 listBox[i].Size__c= 'Large';
+                       }
+                       update listbox;
+                 }
+             }
+         }
