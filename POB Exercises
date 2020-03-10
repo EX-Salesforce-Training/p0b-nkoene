@@ -1,0 +1,144 @@
+//Name : Project 0 
+//Author: Nikita Koene
+//Date: 02/28/2020
+//Description: Apex Program to print first n fibonacci Numbers
+
+public class POB {
+// Exercise 1
+// Method to print first n fibonacci Number
+   public static Integer nFibonacci( Integer n ){
+       integer f1 = 0, f2=1, i, next;
+       
+       if (n < 1){
+           return 0;  
+       }
+        for (i = 1; i <= n; i++) {
+           next = f1 + f2;
+           f1=f2;
+           f2= next;
+       }
+         system.debug(f1);
+  		return f1;
+   }   
+    
+    
+   // Exercise # 2
+        
+	public static list<integer> SortArray(List<Integer> intList){
+        Integer Frederickson;
+        boolean change = false;
+        do{
+            change = false;
+        	for(Integer i = 0; i < intList.size(); i++){
+            if(intList[i] > intlist[i+1]){
+                change= true;
+              	Frederickson = intList[i+1];
+                intList.set(intList[i+1], intlist[i+1]);
+                intList.set(intList[i], Frederickson);
+               }     
+                         }
+                      }while(change);
+                       return intList;
+     			}
+                            }
+
+
+//Exercise #3
+public Void RotateLeft (int d, int n)
+{
+    Return 1; 
+    //0! =1
+}
+else
+{
+    For (Integer i = n; i >0; i--)
+}
+ sum *= i;
+}
+}
+return sum; 
+}
+
+
+//Exercise # 4
+
+
+
+
+
+//Exercise # 5
+Public static Boolean bracketsAreBalanced (string s){
+    Map < String, String> Brackets = new Map<String, String>{'('=>')','{'=>'}','['=>']'};
+        s = s.replaceAll('';'');
+    List<String> openedList = new List<String>();
+    
+    for(Integer i =0; i)< strList.size(); i++)(
+        if (strList[i+1]== brackets.get(strList[i]))){
+            openedList.add(strList[i]);
+            
+        }
+    {
+        System.debug(openedList);
+        
+        Return true;
+    }
+    }
+        }
+    )
+}
+
+
+
+
+
+// POB Project 0 B exercise 6
+public class POB {
+         public static void updateAccountSize( ) {
+             List< Account > ListBox =[SELECT Id, Name, Size__c, NumberOfEmployees FROM account];
+        integer i; integer n;
+             
+             for (i=1; i< n; i++){
+                 
+                 if (ListBox[i].NumberOfEmployees >1 && ListBox[i].NumberOfEmployees <=1000){
+                    listBox[i].Size__c ='Small';
+                        
+                 } else if (ListBox[i].NumberOfEmployees <1 && ListBox[i].NumberOfEmployees <10000){
+             		 listBox[i].Size__c= 'Medium';
+                        
+                 }else if(ListBox[i].NumberOfEmployees >10000){
+                 listBox[i].Size__c= 'Large';
+                       }
+                       update listbox;
+                 }
+             }
+         }
+// POB Project 0 B exercise 7
+Public static void updateCALeads(){
+    List<lead>xyz=[SELECT ID,Name, State FROM Lead WHERE State='CA'];
+    for (xyz.status= 'CA){
+         xyz.description ='We are no longuer doing business in California.';
+         }
+         update xyz;
+         }
+         
+         
+    
+}
+    
+       // POB Project 0 B exercise 8  
+         Public static void closePastDueOpportunities(){
+             list<opportunity>Termaopp=[ SELECT Id, CloseDate FROM Opportunity WHERE Stage = 'closed won'];
+         
+         If (CloseDate < Current.Date()){
+            
+             Termaopp.Stage= 'Closed Lost';
+       
+        }
+         
+         
+        // for (Termaopp.stage= 'Closed won');
+         	// Stagex.stage ='Closed Lost';
+         update Termaopp;
+         
+         }
+}
